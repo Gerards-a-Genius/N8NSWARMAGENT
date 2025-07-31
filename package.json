@@ -6,7 +6,10 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "backend": "cd backend && npm run dev",
     "frontend": "cd frontend && npm run dev",
-    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install"
+    "install:all": "npm install && cd backend && npm install && cd ../frontend && npm install",
+    "build:railway": "cd frontend && npm install && npm run build",
+    "start:railway": "cd backend && npm install && node server.js",
+    "postinstall": "npm run install:all"
   },
   "devDependencies": {
     "concurrently": "^7.6.0"
